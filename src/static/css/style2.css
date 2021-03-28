@@ -1,0 +1,11 @@
+body {
+    background: linear-gradient(45deg, #f0f0ee, #dfc4f7) no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+
+
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détail d'une tâche</title>
+    <link rel="stylesheet" href="/css/style2.css">
+</head>
+<body>
+    <h1>Tâche : <%= taskName %></h1>
+
+    <p>Date de création: <%= taskDetail.Date %></p>
+
+    <h2> Terminé : <% if (taskDetail.Done) {%> oui <%} else { %> non <% }%> </h2>
+    <form action=" <%= `/tasks/${taskDetail.Id}/done_update`%> " method="POST">
+        <% if (taskDetail.Done) { %>
+            <input type="submit" value="Pas terminé"> 
+        <%}
+        else { %>
+           <input type="submit" value="Terminé"> 
+        <% } %>
+        
+    
+    </form>
+
+</body>
+</html>
